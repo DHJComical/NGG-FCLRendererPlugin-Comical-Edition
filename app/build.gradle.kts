@@ -2,7 +2,7 @@
 
 plugins {
     alias(libs.plugins.android.application)
-    alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.kotlin.android)
 }
 
 android {
@@ -17,8 +17,8 @@ android {
         applicationId = "com.bzlzhh.plugin.ngg"
         minSdk = 26
         targetSdk = 34
-        versionCode = 42
-        versionName = "Release 0.4.2"
+        versionCode = 43
+        versionName = "Release 0.4.3"
 
         manifestPlaceholders["des"] = "Krypton Wrapper (OpenGL 3.1+)"
         manifestPlaceholders["renderer"] = "NGGL4ES:libng_gl4es.so:libEGL.so"
@@ -69,13 +69,13 @@ android {
 }
 
 dependencies {
-    implementation(libs.okhttp)
-    implementation(libs.core)
-    implementation(libs.ext.strikethrough)
-    implementation(libs.kotlin.stdlib)
-    implementation(libs.kotlinx.coroutines.core)
-    implementation(libs.kotlinx.coroutines.android)
-    implementation(libs.androidx.core)
-    implementation(libs.material)
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+    implementation("androidx.core:core-ktx:1.12.0")
+    implementation("com.google.android.material:material:1.11.0")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.9.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+    implementation("io.noties.markwon:core:4.6.2")
+    implementation("io.noties.markwon:ext-strikethrough:4.6.2")
     implementation(project(":NGG"))
 }
