@@ -17,8 +17,8 @@ android {
         applicationId = "com.bzlzhh.plugin.ngg"
         minSdk = 26
         targetSdk = 34
-        versionCode = 43
-        versionName = "Release 0.4.3"
+        versionCode = 44
+        versionName = "Release 0.4.4"
 
         manifestPlaceholders["des"] = "Krypton Wrapper (OpenGL 3.1+)"
         manifestPlaceholders["renderer"] = "NGGL4ES:libng_gl4es.so:libEGL.so"
